@@ -24,7 +24,7 @@ if __name__ == '__main__':
 
     best_score = env.reward_range[0]
     score_history = []
-    load_checkpoint = True
+    load_checkpoint = False
     if load_checkpoint:
         agent.load_models()
         env.render(mode='human')
