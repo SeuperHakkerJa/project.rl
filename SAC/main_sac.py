@@ -1,5 +1,5 @@
 
-import pybullet_envs
+import mujoco_py
 import gym
 import numpy as np
 from sac_torch import Agent
@@ -10,10 +10,11 @@ if __name__ == '__main__':
     #env_id = 'LunarLanderContinuous-v2'
     #env_id = 'BipedalWalker-v2'
     #env_id = 'AntBulletEnv-v0'
-    env_id = 'InvertedPendulumBulletEnv-v0'
+    #env_id = 'InvertedPendulumBulletEnv-v0'
+    env_id = 'HalfCheetah-v2'
     #env_id = 'CartPoleContinuousBulletEnv-v0'
     env = gym.make(env_id)
-    agent = Agent(alpha=0.0003, beta=0.0003, reward_scale=2, env_id=env_id,
+    agent = Agent(alpha=0.0003, beta=0.0003, reward_scale=1, env_id=env_id,
                 input_dims=env.observation_space.shape, tau=0.005,
                 env=env, batch_size=256, layer1_size=256, layer2_size=256,
                 n_actions=env.action_space.shape[0])

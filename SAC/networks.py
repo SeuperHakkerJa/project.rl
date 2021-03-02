@@ -77,7 +77,7 @@ class ActorNetwork(nn.Module):
         mu = self.mu(prob)
         #sigma = T.sigmoid(self.sigma(prob))
         sigma = self.sigma(prob)
-        sigma = T.clamp(sigma, min=self.reparam_noise, max=1) 
+        sigma = T.clamp(sigma, min=self.reparam_noise, max=1)
         # authors use -20, 2 -> doesn't seem to work for my implementation
 
         return mu, sigma
@@ -91,7 +91,7 @@ class ActorNetwork(nn.Module):
         else:
             actions = probabilities.sample()
 
-        action = T.tanh(actions)*T.tensor(self.max_action).to(self.device) 
+        action = T.tanh(actions)*T.tensor(self.max_action).to(self.device)
         log_probs = probabilities.log_prob(actions)
         log_probs -= T.log(1-action.pow(2) + self.reparam_noise)
         log_probs = log_probs.sum(1, keepdim=True)
@@ -162,4 +162,3 @@ class ValueNetwork(nn.Module):
 
     def load_checkpoint(self):
         self.load_state_dict(T.load(self.checkpoint_file))
-
