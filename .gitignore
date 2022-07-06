@@ -1,0 +1,14 @@
+.DS_Store
+__pycache__
+
+imgui.ini
+.vscode
+captured_data
+partnet-mobility-dataset
+.ipynb_checkpoints
+
+*.egg-info
+.idea/
+.idea/misc.xml
+.idea/project.rl.iml
+.idea/project.rl.iml
