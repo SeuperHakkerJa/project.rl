@@ -63,6 +63,5 @@ dependencies:
 
   #   # More RL
     - stable-baselines3
-
     - pylint
     - autopep8

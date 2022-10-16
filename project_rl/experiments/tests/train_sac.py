@@ -29,13 +29,13 @@ flags.DEFINE_integer('max_steps', int(1e6), 'Number of training steps.')
 flags.DEFINE_integer('start_training', int(1e4),
                      'Number of training steps to start training.')
 flags.DEFINE_boolean('tqdm', True, 'Use tqdm progress bar.')
-flags.DEFINE_boolean('save_video', False, 'Save videos during evaluation.')
-flags.DEFINE_boolean('track', False, 'Track experiments with Weights and Biases.')
-flags.DEFINE_string('wandb_project_name', "jaxrl", "The wandb's project name.")
-flags.DEFINE_string('wandb_entity', None, "the entity (team) of wandb's project")
+flags.DEFINE_boolean('save_video', True, 'Save videos during evaluation.')
+flags.DEFINE_boolean('track', True, 'Track experiments with Weights and Biases.')
+flags.DEFINE_string('wandb_project_name', "test", "The wandb's project name.")
+flags.DEFINE_string('wandb_entity', 'jacobli', "the entity (team) of wandb's project")
 config_flags.DEFINE_config_file(
     'config',
-    'configs/sac_default.py',
+    'cfgs/sac_default.py', # TODO: make absolute
     'File path to the training hyperparameter configuration.',
     lock_config=False)
 
