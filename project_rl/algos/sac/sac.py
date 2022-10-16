@@ -15,7 +15,7 @@ from project_rl.algos.networks.commons import InfoDict, Model, PRNGKey
 from project_rl.algos.sac.actor_critic import (
     update_actor, update_critic, update_actor
 )
-from project_rl.algos.sac.utils import Batch
+from project_rl.datasets.utils import Batch
 from project_rl.algos.networks import policies, critic_net
 
 

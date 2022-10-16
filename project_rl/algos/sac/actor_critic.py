@@ -3,7 +3,7 @@ from typing import Tuple
 import jax
 import jax.numpy as jnp
 
-from project_rl.algos.sac.utils import Batch
+from project_rl.datasets.utils import Batch
 from project_rl.algos.networks.commons import InfoDict, Model, Params, PRNGKey
 
 
