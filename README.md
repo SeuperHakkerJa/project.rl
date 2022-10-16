@@ -3,4 +3,8 @@ RL algos + envs
 
 
 ## TODO:
-SAC, PPO, TD3, DDPG, HAC
+SAC (JAX),
+PPO,
+TD3,
+DDPG (JAX),
+HAC

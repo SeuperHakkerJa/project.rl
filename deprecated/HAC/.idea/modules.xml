@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/HAC.iml" filepath="$PROJECT_DIR$/.idea/HAC.iml" />
-      <module fileurl="file://$USER_HOME$/Downloads/hrl-main/.idea/hrl-main.iml" filepath="$USER_HOME$/Downloads/hrl-main/.idea/hrl-main.iml" />
-    </modules>
-  </component>
-</project>

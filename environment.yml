@@ -1,0 +1,68 @@
+# credit to: https://github.com/StoneT2000/robojax/blob/9c21ab4570d1939257f056e5c7abaf8b57940365/environment.yml
+name: project_rl
+channels:
+  - conda-forge
+  - pytorch
+  - huggingface
+dependencies:
+  # basics
+  - python=3.8
+  - numpy
+  - matplotlib
+  - dill
+  - pandas
+  - seaborn
+  - scipy
+  - jupyterlab
+  - pip
+  - ipdb
+  - cython
+  - scikit-learn
+  - tqdm
+  - yaml
+  - ipywidgets
+  - black
+  - isort
+
+  # RL related
+  - gym
+
+  - huggingface::transformers
+
+  # Vision
+  - opencv
+  - transforms3d
+
+  - pip:
+    # Jax ecosystem
+    - jax[cpu]
+    - chex
+    # - haiku
+    - flax
+    - distrax
+    - optax
+
+  #   # Simulators
+    - mujoco-py<2.2,>=2.1 # might need to use ```pip install mujoco```
+    - gymnax
+    - brax
+
+  #   # Video generation
+    - moviepy
+
+  #   # Exp tracking
+    - tensorboard
+    - wandb
+    - omegaconf
+    - ml-collections
+
+  #   # More Deep Learning
+    - huggingface_hub
+
+    - pyglet>=1.4.0
+
+  #   # More RL
+    - stable-baselines3
+
+    - pylint
+    - autopep8
